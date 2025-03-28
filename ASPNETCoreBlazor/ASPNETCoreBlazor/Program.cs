@@ -16,6 +16,8 @@ app.MapControllers();
 // say is which Program.cs file do I add it to; the one in the ASP.NET Core app or the one in the Blazor app? I'm going to assume it's the one in the
 // ASP.NET Core app.
 app.UseBlazorFrameworkFiles();
-app.MapFallbackToFile("index.html");
+app.MapFallbackToFile("index.html");    // What's missing from this line of code is the path to the index.html file. It is in the other project.
+                                        // However, the app object here, is not defined in the Program.cs file in the other project. I'm not
+                                        // sure how to resolve this issue. Therefore, I'm committing this code as is.
 
 app.Run();
